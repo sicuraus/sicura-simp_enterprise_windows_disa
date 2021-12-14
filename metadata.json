@@ -1,6 +1,6 @@
 {
   "name": "onyxpoint-simp_enterprise_windows_disa",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Onyx Point, Inc",
   "summary": "Defense Information Systems Agency Compliance Engine profiles for Windows systems",
   "license": "proprietary",
@@ -10,11 +10,11 @@
   "dependencies": [
     {
       "name": "simp-compliance_markup",
-      "version_requirement": ">= 3.1.3 < 4.0.0"
+      "version_requirement": ">= 3.2.0 < 4.0.0"
     },
     {
       "name": "simp-simp_windows",
-      "version_requirement": ">= 1.5.0 < 2.0.0"
+      "version_requirement": ">= 1.6.0 < 2.0.0"
     }
   ],
   "operatingsystem_support": [
@@ -32,7 +32,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 5.0.0 < 8.0.0"
+      "version_requirement": ">= 6.0.0 < 8.0.0"
     }
   ],
   "pdk-version": "2.1.0",
