@@ -3,13 +3,14 @@
 
 #### Table of Contents
 
-1. [Description](#description)
-2. [Setup - The basics of getting started with simp_enterprise_windows_disa](#setup)
-    * [Setup requirements](#setup-requirements)
-    * [Beginning with simp_enterprise_windows_disa](#beginning-with-simp_enterprise_windows_disa)
-3. [Usage - Configuration options and additional functionality](#usage)
-4. [Limitations - OS compatibility, etc.](#limitations)
-5. [Development - Guide for contributing to the module](#development)
+- [DISA STiG enforcement for Windows](#disa-stig-enforcement-for-windows)
+      - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Setup](#setup)
+    - [Setup Requirements](#setup-requirements)
+    - [Beginning with simp\_enterprise\_windows\_disa](#beginning-with-simp_enterprise_windows_disa)
+  - [Usage](#usage)
+  - [Limitations](#limitations)
 
 ## Description
 
@@ -24,35 +25,39 @@ This module requires the functionality provided in the simp_windows module to tr
 ### Beginning with simp_enterprise_windows_disa
 
 Copy the module files into your Puppet modules directory.
+
 ## Usage
 
-With the simp_windows module and its dependencies installed, specify one or more of the following profiles for enforcement by simp/compliance_markup.
+With the simp_windows module and its dependencies installed, specify one or more of the following profiles for enforcement by simp/compliance_markup:
 
-*   disa_stig:xccdf_mil.disa.stig_profile_mac-1_classified:
-*   disa_stig:xccdf_mil.disa.stig_profile_mac-1_public:
-*   disa_stig:xccdf_mil.disa.stig_profile_mac-1_sensitive:
-*   disa_stig:xccdf_mil.disa.stig_profile_mac-2_classified:
-*   disa_stig:xccdf_mil.disa.stig_profile_mac-2_public:
-*   disa_stig:xccdf_mil.disa.stig_profile_mac-2_sensitive:
-*   disa_stig:xccdf_mil.disa.stig_profile_mac-3_classified:
-*   disa_stig:xccdf_mil.disa.stig_profile_mac-3_public:
-*   disa_stig:xccdf_mil.disa.stig_profile_mac-3_sensitive:
-*   disa_stig:xccdf_mil.disa.stig_profile_disable_slow_rules:
-*   disa_stig:xccdf_mil.disa.stig_profile_cat_i_only:
+* disa:mac-1:classified
+* disa:mac-1:public
+* disa:mac-1:sensitive
+* disa:mac-2:classified
+* disa:mac-2:public
+* disa:mac-2:sensitive
+* disa:mac-3:classified
+* disa:mac-3:public
+* disa:mac-3:sensitive
+
+### Example
 
 ```puppet
-include '::simp_windows'
+include 'simp_windows'
 
 compliance_markup::enforcement:
-  - disa_stig:xccdf_mil.disa.stig_profile_mac-1_classified
-  - disa_stig:xccdf_mil.disa.stig_profile_disable_slow_rules
-
+  - disa:mac-1:classified
 ```
 
 ## Limitations
 
 This module has been tested and is supported on Domain Controllers, Domain Members, and standalone systems running the following Windows versions:
 
-* Windows 2012 R2
-* Windows Server 2016 (v1607)
-* Windows Server 2019 (v1809)
+* Windows Server 2016
+* Windows Server 2019
+* Windows Server 2022
+
+In addition, the following Windows workstation versions are supported:
+
+* Windows 10
+* Windows 11

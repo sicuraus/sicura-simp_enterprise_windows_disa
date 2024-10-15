@@ -1,12 +1,12 @@
 {
-  "name": "onyxpoint-simp_enterprise_windows_disa",
-  "version": "1.4.5",
-  "author": "Onyx Point, Inc",
+  "name": "sicura-simp_enterprise_windows_disa",
+  "version": "1.5.0",
+  "author": "Sicura, Inc",
   "summary": "Defense Information Systems Agency Compliance Engine profiles for Windows systems",
   "license": "proprietary",
   "source": "N/A",
-  "project_page": "https://sicura.us",
-  "issues_url": "https://sicura.us",
+  "project_page": "https://sicura.us/",
+  "issues_url": "https://sicura.freshdesk.com/",
   "dependencies": [
     {
       "name": "simp-compliance_markup",
@@ -24,7 +24,8 @@
         "2016",
         "2019",
         "2022",
-        "10"
+        "10",
+        "11"
       ]
     }
   ],
@@ -34,7 +35,7 @@
       "version_requirement": ">= 7.0.0 < 9.0.0"
     }
   ],
-  "pdk-version": "3.0.0",
-  "template-url": "pdk-default#3.0.0",
-  "template-ref": "tags/3.0.0-0-g056e50d"
+  "pdk-version": "3.2.0",
+  "template-url": "pdk-default#3.2.0",
+  "template-ref": "tags/3.2.0-0-gb257ef1"
 }
