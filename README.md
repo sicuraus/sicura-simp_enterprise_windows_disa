@@ -1,9 +1,9 @@
-# DISA STiG enforcement for Windows
+# DISA STIG enforcement for Windows
 
 
 #### Table of Contents
 
-- [DISA STiG enforcement for Windows](#disa-stig-enforcement-for-windows)
+- [DISA STIG enforcement for Windows](#disa-stig-enforcement-for-windows)
       - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Setup](#setup)
@@ -14,13 +14,13 @@
 
 ## Description
 
-Provides SIMP Compliance Engine compatible data that translates to Puppet resources which will configure the target system per the Defence Information Systems Agency's Security Technical Implementation Guide.
+Provides Compliance Engine compatible data that translates to Puppet resources which will configure the target system per the Defence Information Systems Agency's Security Technical Implementation Guide.
 
 ## Setup
 
 ### Setup Requirements
 
-This module requires the functionality provided in the simp_windows module to translate the data into puppet parameters.
+This module requires the functionality provided in the `simp_windows` module to translate the data into puppet parameters.
 
 ### Beginning with simp_enterprise_windows_disa
 
@@ -28,7 +28,7 @@ Copy the module files into your Puppet modules directory.
 
 ## Usage
 
-With the simp_windows module and its dependencies installed, specify one or more of the following profiles for enforcement by simp/compliance_markup:
+With the `sicura` module, the `simp_windows` module, and its dependencies installed, specify one or more of the following profiles for enforcement by `compliance_engine`:
 
 * disa:mac-1:classified
 * disa:mac-1:public
@@ -43,11 +43,22 @@ With the simp_windows module and its dependencies installed, specify one or more
 ### Example
 
 ```puppet
-include 'simp_windows'
+include 'sicura'
+```
 
-compliance_markup::enforcement:
+Add the following to your `hierarchy` in `hiera.yaml`:
+```yaml
+- name: Compliance Engine
+  lookup_key: compliance_engine::enforcement
+```
+
+And add the following to your Hiera data:
+```yaml
+compliance_engine::enforcement:
   - disa:mac-1:classified
 ```
+
+(Substitute `compliance_markup` for `compliance_engine` in both snippets to use the older module.)
 
 ## Limitations
 
@@ -57,7 +68,7 @@ This module has been tested and is supported on Domain Controllers, Domain Membe
 * Windows Server 2019
 * Windows Server 2022
 
-In addition, the following Windows workstation versions are supported:
+In addition, the module has been validated against the following Windows workstation versions:
 
-* Windows 10
+* Windows 10 (EOL)
 * Windows 11
