@@ -1,6 +1,6 @@
 {
   "name": "sicura-simp_enterprise_windows_disa",
-  "version": "3.0.2",
+  "version": "3.0.6",
   "author": "Sicura, Inc.",
   "summary": "Defense Information Systems Agency Compliance Engine profiles for Windows systems",
   "license": "AGPL-3.0-or-later",
@@ -27,11 +27,11 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 8.0.0 < 9.0.0"
+      "version_requirement": ">= 8.0.0 < 10.0.0"
     },
     {
       "name": "openvox",
-      "version_requirement": ">= 8.0.0 < 9.0.0"
+      "version_requirement": ">= 8.0.0 < 10.0.0"
     }
   ]
 }
